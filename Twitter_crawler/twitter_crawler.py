@@ -4,10 +4,11 @@ import pandas as pd
 import tweepy
 from tweepy import OAuthHandler
 
-consumer_key = 'ZquDhxKq9Cq7ACX70A7JzeXDh'
-consumer_secret = 'LCy4SsndbWxfvWoxPswiIjYR6XStfMfUJ36gSkoB6IE4YRSGC6'
-access_token = '1230672590726889472-NlenXX4VRi7dCDg4HKcTfBfvIYhCfV'
-access_token_secret = 'Y66BEGPBlxxhEUKv0zxmjDOsu2DRoYvjEhcJfAEKxh4Fh'
+# Apply for a Twitter Developer account to acquire Twitter API key
+consumer_key = 'PASTE YOUR OWN KEY HERE'
+consumer_secret = 'PASTE YOUR OWN KEY HERE'
+access_token = 'PASTE YOUR OWN KEY HERE'
+access_token_secret = 'PASTE YOUR OWN KEY HERE'
 # create OAuthHandler object
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 # set access token and secret
@@ -15,8 +16,8 @@ auth.set_access_token(access_token, access_token_secret)
 # create tweepy API object to fetch tweets
 api = tweepy.API(auth)
 
-keyword = 'COVID'
-data_until = '2020-04-13'
+keyword = 'COVID' # Change the keyword
+data_until = '2020-04-13' # Change the valid date
 
 # remove the emojis from the contents of the text.
 def data_clean(string):
